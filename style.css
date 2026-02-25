@@ -1,22 +1,24 @@
-/*. oi =====   ajwhhedhsdjhahjdhjasdESTILOS GERAIS ===== */
+/* ===== ESTILOS GERAIS ===== */
 body {
   font-family: 'Arial', sans-serif;  /* Define a fonte padrão */
   margin: 0;                         /* Remove margens padrão do navegador */
   padding: 0;                        /* Remove paddings padrão */
-  background-color: #f5f7fa;         /* Cor de fundo clara padrão */
-  color: #333;                       /* Cor do texto principal */
+  background: linear-gradient(135deg, #fdf5f5 0%, #fbe9e9 100%); /* Degradê suave vinho claro */
+  color: #4a2c2c;                    /* Cor do texto principal (tom vinho escuro) */
   line-height: 1.6;                  /* Espaçamento entre linhas */
+  min-height: 100vh;                 /* Garante que o fundo ocupe toda a altura */
 }
 
 /* ===== CABEÇALHO ===== */
 header {
-  background-color: #2c3e50;         /* Cor de fundo azul escuro */
+  background: linear-gradient(145deg, #8b2c2c 0%, #5c1a1a 100%); /* Degradê vinho escuro */
   color: white;                      /* Cor do texto */
   padding: 20px;                     /* Espaçamento interno */
   display: flex;                     /* Ativa flexbox para alinhamento */
   justify-content: space-between;    /* Espaço entre elementos */
   align-items: center;               /* Centraliza verticalmente */
   flex-wrap: wrap;                   /* Permite quebra de linha em telas pequenas */
+  box-shadow: 0 4px 15px rgba(139, 44, 44, 0.3); /* Sombra vinho suave */
 }
 
 /* Container do conteúdo do header */
@@ -32,8 +34,8 @@ header {
   height: 80px;                     /* Altura fixa (igual à largura para formar círculo) */
   border-radius: 50%;                /* Torna a imagem circular */
   object-fit: cover;                 /* Garante que a imagem preencha o espaço sem distorcer */
-  border: 3px solid #3498db;         /* Borda azul ao redor da imagem */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Sombra sutil */
+  border: 3px solid #dba1a1;         /* Borda vinho claro ao redor da imagem */
+  box-shadow: 0 2px 4px rgba(92, 26, 26, 0.3); /* Sombra vinho escuro */
 }
 
 /* Container do texto no header */
@@ -45,32 +47,36 @@ header {
 button {
   margin: 5px;                       /* Espaçamento externo */
   padding: 10px 15px;                /* Espaçamento interno */
-  background-color: #3498db;         /* Cor de fundo azul */
+  background: linear-gradient(145deg, #b84c4c 0%, #8b2c2c 100%); /* Degradê vinho para botões */
   color: white;                      /* Cor do texto */
   border: none;                      /* Remove borda padrão */
   border-radius: 5px;                /* Cantos arredondados */
   cursor: pointer;                   /* Muda cursor para pointer */
-  transition: background-color 0.3s; /* Transição suave de cor */
+  transition: all 0.3s ease;         /* Transição suave */
+  box-shadow: 0 2px 8px rgba(139, 44, 44, 0.3); /* Sombra vinho */
 }
 
 button:hover {
-  background-color: #2980b9;        /* Cor mais escura no hover */
+  background: linear-gradient(145deg, #9e3a3a 0%, #5c1a1a 100%); /* Degradê mais escuro no hover */
+  transform: translateY(-2px);       /* Leve elevação */
+  box-shadow: 0 4px 12px rgba(92, 26, 26, 0.4); /* Sombra mais intensa */
 }
 
 /* ===== SEÇÕES DE CONTEÚDO ===== */
 section {
   max-width: 800px;                 /* Largura máxima */
   margin: 20px auto;                /* Centraliza na página */
-  background-color: white;          /* Fundo branco */
+  background: linear-gradient(145deg, #fff9f9 0%, #ffefef 100%); /* Degradê branco com vinho suave */
   padding: 20px;                    /* Espaçamento interno */
   border-radius: 8px;               /* Cantos arredondados */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil */
+  box-shadow: 0 4px 15px rgba(139, 44, 44, 0.15); /* Sombra vinho suave */
+  border-left: 4px solid #b84c4c;   /* Borda lateral vinho */
 }
 
 /* Títulos das seções */
 h2 {
-  color: #2c3e50;                   /* Cor azul escuro */
-  border-bottom: 2px solid #3498db; /* Linha inferior azul */
+  color: #5c1a1a;                   /* Cor vinho escuro */
+  border-bottom: 2px solid #b84c4c; /* Linha inferior vinho médio */
   padding-bottom: 5px;              /* Espaço entre texto e linha */
   margin-bottom: 15px;              /* Margem inferior */
 }
@@ -79,15 +85,22 @@ h2 {
 ul {
   padding-left: 20px;               /* Recuo para alinhar marcadores */
   list-style-type: square;          /* Estilo dos marcadores */
+  color: #4a2c2c;                   /* Texto em tom vinho escuro */
+}
+
+/* Itens da lista */
+li {
+  margin-bottom: 5px;               /* Espaço entre itens */
 }
 
 /* ===== RODAPÉ ===== */
 footer {
   text-align: center;               /* Centraliza texto */
   padding: 15px;                    /* Espaçamento interno */
-  background-color: #2c3e50;        /* Cor igual ao header */
+  background: linear-gradient(145deg, #5c1a1a 0%, #3a1111 100%); /* Degradê vinho mais escuro */
   color: white;                     /* Texto branco */
   margin-top: 30px;                 /* Espaço acima do rodapé */
+  box-shadow: 0 -4px 15px rgba(92, 26, 26, 0.3); /* Sombra superior */
 }
 
 /* ===== RESPONSIVIDADE ===== */
@@ -112,35 +125,36 @@ footer {
 
 /* ===== MODO ESCURO ===== */
 body.dark-mode {
-  background-color: #1e1e1e;       /* Fundo escuro */
-  color: #f5f5f5;                  /* Texto claro */
+  background: linear-gradient(135deg, #2c1a1a 0%, #1f1212 100%); /* Degradê vinho muito escuro */
+  color: #ffefef;                  /* Texto claro com tom rosado */
 }
 
 body.dark-mode header,
 body.dark-mode footer {
-  background-color: #121212;       /* Tom mais escuro para header/footer */
+  background: linear-gradient(145deg, #3d1a1a 0%, #240f0f 100%); /* Degradê vinho mais escuro para header/footer */
 }
 
 body.dark-mode section {
-  background-color: #2a2a2a;       /* Fundo cinza escuro para seções */
-  color: #f5f5f5;                  /* Texto claro */
+  background: linear-gradient(145deg, #332121 0%, #291a1a 100%); /* Degradê vinho escuro para seções */
+  color: #ffefef;                  /* Texto claro */
+  border-left: 4px solid #b84c4c;   /* Mantém borda vinho médio */
 }
 
 body.dark-mode h2 {
-  color: #ffffff;                  /* Texto branco */
-  border-color: #90caf9;           /* Borda azul claro */
+  color: #dba1a1;                   /* Vinho claro */
+  border-color: #b84c4c;           /* Borda vinho médio */
 }
 
 body.dark-mode button {
-  background-color: #90caf9;       /* Azul claro */
-  color: #000;                     /* Texto preto */
+  background: linear-gradient(145deg, #b84c4c 0%, #8b2c2c 100%); /* Mantém botões com vinho médio */
+  color: white;                     /* Texto branco */
 }
 
 body.dark-mode button:hover {
-  background-color: #64b5f6;       /* Azul claro mais escuro */
+  background: linear-gradient(145deg, #9e3a3a 0%, #5c1a1a 100%); /* Degradê mais escuro no hover */
 }
 
 body.dark-mode .profile-img {
-  border-color: #64b5f6;           /* Borda azul no modo escuro */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.4); /* Sombra mais visível */
+  border-color: #dba1a1;           /* Borda vinho claro no modo escuro */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Sombra mais visível */
 }
